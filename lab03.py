@@ -26,4 +26,13 @@ def get_combat_strength(prompt):
 
 combatStrength = get_combat_strength("Enter your combat strength 1-6")
 
-combatStrength = random.choice(diceOpt)
+
+for j in range(1, 21, 2):
+    heroRoll = random.choice(diceOpt)
+    monsterRoll = random.choice(diceOpt)
+
+
+    heroWeapon = weapons[heroRoll - 1]
+    MonsterWeapon = weapons[monsterRoll - 1]
+    heroTotal = combatStrength + heroRoll
+    monsterTotall = combatStrength + monsterRoll
